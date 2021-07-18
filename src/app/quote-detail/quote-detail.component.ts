@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteDetailComponent implements OnInit {
 
+  readMore: boolean=false;
+
+  toggleReadMore(){
+  this.readMore=!this.readMore
+  };
+
   constructor() { }
 
   ngOnInit(): void {

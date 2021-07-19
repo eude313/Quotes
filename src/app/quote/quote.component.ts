@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-quote',
@@ -11,7 +12,9 @@ export class QuoteComponent implements OnInit {
   @Output() kelly= new EventEmitter();
   showForm: boolean=false;
 
-
+  clearForm(form: FormGroup) {
+    form.reset();
+  }
   
   submit(me:any){
     this.kelly.emit(me);

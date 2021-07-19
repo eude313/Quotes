@@ -26,12 +26,12 @@
         <form #form ="ngForm" (ngSubmit)="submit(form.value)" > 
           <!-- Name input -->
           <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:1.8s;">
-            <input type="name" name="name" id="form4Example1" class="form-control" placeholder="Your Name" ngModel/>
+            <input type="name" name="name" id="form4Example1" class="form-control" placeholder="Auther's Name" ngModel/>
           </div>
         
           <!-- Email input -->
           <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:1.8s;">
-            <input type="title" name="title" id="form4Example2"  ngModel class="form-control" placeholder="Quote Title" />
+            <input type="title" name="title" id="form4Example2"  ngModel class="form-control" placeholder="Quote Title"/>
           </div>
         
           <!-- Message input -->
@@ -40,9 +40,9 @@
           </div>
         
           <!-- Checkbox -->
-          <div class="form-outline mb-4">
-            <input type="auther" name="auther" style="font-family: 'Merienda', cursive;" placeholder="auther">
-          </div>
+          <!-- <div class="form-outline mb-4">
+            <input type="auther" name="auther" style="font-family: 'Merienda', cursive;" placeholder="Auther's Name">
+          </div> -->
           <div class="form-check d-flex justify-content-between mb-4 animated fadeInDown" style="animation-delay:1.8s;">
             <input
                 class="form-check-input me-2 m-8"  
@@ -59,6 +59,7 @@
         
           <!-- Submit button -->
           <button type="submit" class="btn btn-danger btn-rounded text-center animated fadeInDown" style=" animation-delay:1.8s; background-color: red; width: auto; font-family: 'Merienda', cursive;">Create quote</button>
+          <button (click)="clearForm(Your_form_name)"> clear form </button>
         </form>
       </div>
     </div>

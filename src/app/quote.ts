@@ -1,3 +1,3 @@
 export class Quote {
-    constructor ( public name:string, public auther:string, public date: Date,  public title: string ){};
+    constructor ( public name:string, public title:string, public date: Date,  public quote: string ){};
 };

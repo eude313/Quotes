@@ -7,7 +7,7 @@ import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 })
 export class QuoteComponent implements OnInit {
 
-  @Input() charlo:any;
+  // @Input() charlo:any;
   @Output() kelly= new EventEmitter();
   showForm: boolean=false;
 

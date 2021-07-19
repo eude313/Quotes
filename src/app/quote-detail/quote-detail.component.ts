@@ -14,7 +14,7 @@ export class QuoteDetailComponent implements OnInit {
   dis:number =0;
   
   bless:Quote[]=[
-    new Quote("katana", "auter", new Date ( 2000,11,23), "ifaetrxdfguhijo lkd fyghkjhk;l")
+    new Quote("katana", "Carbon", new Date ( 2000,11,23), "“Write it. Shoot it. Publish it. Crochet it, sauté it, whatever. MAKE.” ")
   ];
 
   // delQuote(index:number):void{

@@ -1,7 +1,100 @@
 <app-quote (kelly)="loga($event)"></app-quote>
 <div class="container">
     <div class="row">
-      <div class="col-sm-4 mb-9" *ngFor="let blessing of bless; let i =index">
+      <div class="col-sm-4 pt-1">
+        <div class="card btn-outline-danger" style=" border: 2px solid #dee2e6 !important;;">
+          <div class="card-body">
+            <div>
+              <div>
+                <h5 class="card-title" style="font-family: 'Merienda', cursive; color: rgba(255, 0, 0, 0.924); text-shadow: 2px 2px 3px black; font-size: 1.3vw;">Be comfortable</h5>
+              </div>
+              <div>
+                <p class="card-text" style="font-size: 1.3vw; color:wheat; font-family: 'Kaushan Script', cursive;">
+                  “All our dreams can come true, if we have the courage to pursue them.”.
+                </p>
+
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">by: Walt Disney</p>
+              </div>
+
+            </div>
+            <div>
+              <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;" >submited on: Jan 30 1990</p>
+
+            </div>
+           
+            <div class="d-flex justify-content-around" *ngIf="readMore">
+              <div class="text-center" style="font-size: 1vw; color:rgb(30, 255, 0); font-family: 'Kaushan Script', cursive;">
+                <i class="fas fa-thumbs-up" (click)="inc()"></i>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;" >Up-vote: </p> 
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;" > {{likes}}</p>
+              </div>
+              <div class="text-center" style="font-size: 1vw; color:rgb(38, 0, 255); font-family: 'Kaushan Script', cursive;">
+                <i class="fas fa-thumbs-down" (click)="dec()"></i>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">Down-vote:</p>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">{{dis}}</p>
+              </div>
+              <div class="text-center" style="font-size: 1vw; color:red; font-family: 'Kaushan Script', cursive;">
+                <!-- (click)="delQuote()" -->
+                <i class="fas fa-trash" ></i>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">Delete</p>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="toggleReadMore()">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 mb-1">
+        <div class="card btn-outline-danger" style=" border: 2px solid #dee2e6 !important;;">
+          <div class="card-body">
+            <div>
+              <div>
+                <h5 class="card-title" style="font-family: 'Merienda', cursive; color: rgba(255, 0, 0, 0.924); text-shadow: 2px 2px 3px black; font-size: 1.3vw;">Be comfortable</h5>
+              </div>
+              <div>
+                <p class="card-text" style="font-size: 1.3vw; color:wheat; font-family: 'Kaushan Script', cursive;">
+                  “It’s not the load that breaks you down, it’s the way you carry it.”.
+                </p>
+
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">by: Lou Holtz</p>
+              </div>
+
+            </div>
+            <div>
+              <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;" >submited on: May 03 2013</p>
+
+            </div>
+           
+            <div class="d-flex justify-content-around" *ngIf="readMore">
+              <div class="text-center" style="font-size: 1vw; color:rgb(30, 255, 0); font-family: 'Kaushan Script', cursive;">
+                <i class="fas fa-thumbs-up" (click)="inc()"></i>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;" >Up-vote: </p> 
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;" > {{likes}}</p>
+              </div>
+              <div class="text-center" style="font-size: 1vw; color:rgb(38, 0, 255); font-family: 'Kaushan Script', cursive;">
+                <i class="fas fa-thumbs-down" (click)="dec()"></i>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">Down-vote:</p>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">{{dis}}</p>
+              </div>
+              <div class="text-center" style="font-size: 1vw; color:red; font-family: 'Kaushan Script', cursive;">
+                <!-- (click)="delQuote()" -->
+                <i class="fas fa-trash" ></i>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">Delete</p>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="toggleReadMore()">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+      <div class="col-sm-4 mb-1" *ngFor="let blessing of bless; let i =index">
         <div class="card btn-outline-danger" style=" border: 2px solid #dee2e6 !important;;">
           <div class="card-body">
             <div>

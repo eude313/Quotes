@@ -17,12 +17,12 @@ export class QuoteDetailComponent implements OnInit {
     new Quote("katana", "auter", new Date ( 2000,11,23), "ifaetrxdfguhijo lkd fyghkjhk;l")
   ];
 
-  delQuote(index:number):void{
-    this.splice(index)
-  }
-  splice(index: number) {
-    throw new Error('Method not implemented.');
-  }
+  // delQuote(index:number):void{
+  //   this.splice(index)
+  // }
+  // splice(index: number) {
+  //   throw new Error('Method not implemented.');
+  // }
 
   loga(event:any){
     this.bless.push(event);

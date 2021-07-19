@@ -22,8 +22,8 @@
             Make your own quote
         </button>
       </div> 
-      <div class=" animated fadeInDown clearfix" style="animation-delay:1.8s; width: 20vw; margin-left: 1vw;" *ngIf="showForm">
-        <form #form ="ngForm" (ngSubmit)="submit(form.value)" > 
+      <div class=" animated fadeInDown slide-in-right" style="animation-delay:1.8s; width: 20vw; margin-left: 1vw;" *ngIf="showForm">
+        <form #form ="ngForm" (ngSubmit)="submit(form.value)"> 
           <!-- Name input -->
           <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:1.8s;">
             <input type="name" name="name" id="form4Example1" class="form-control" placeholder="Auther's Name" ngModel/>
@@ -59,7 +59,7 @@
         
           <!-- Submit button -->
           <button type="submit" class="btn btn-danger btn-rounded text-center animated fadeInDown" style=" animation-delay:1.8s; background-color: red; width: auto; font-family: 'Merienda', cursive;">Create quote</button>
-          <button (click)="clearForm(Your_form_name)"> clear form </button>
+          
         </form>
       </div>
     </div>

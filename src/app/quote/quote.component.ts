@@ -12,10 +12,6 @@ export class QuoteComponent implements OnInit {
   @Output() kelly= new EventEmitter();
   showForm: boolean=false;
 
-  clearForm(form: FormGroup) {
-    form.reset();
-  }
-  
   submit(me:any){
     this.kelly.emit(me);
   };

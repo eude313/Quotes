@@ -14,10 +14,15 @@ export class QuoteDetailComponent implements OnInit {
   dis:number =0;
   
   bless:Quote[]=[
-    new Quote("katana", "auter", new Date (), "ifaetrxdfguhijo lkd fyghkjhk;l")
+    new Quote("katana", "auter", new Date ( 2000,11,23), "ifaetrxdfguhijo lkd fyghkjhk;l")
   ];
 
-
+  delQuote(index:number):void{
+    this.splice(index)
+  }
+  splice(index: number) {
+    throw new Error('Method not implemented.');
+  }
 
   loga(event:any){
     this.bless.push(event);
@@ -29,10 +34,6 @@ export class QuoteDetailComponent implements OnInit {
   dec(){
     this.dis ++
   }
-
-  onClick(){
-    alert('are you sure you want to delete!')
-  };
 
   toggleReadMore(){
   this.readMore=!this.readMore

@@ -124,10 +124,10 @@
                 <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">Down-vote: {{dis}}</p>
                 
               </div>
-              <div class="text-center" style="font-size: 1vw; color:red; font-family: 'Kaushan Script', cursive;">
-                <!-- (click)="delQuote()" -->
+              <div  (click)='deleteQuote(true)' class="text-center" style="font-size: 1vw; color:red; font-family: 'Kaushan Script', cursive;">
+                
                 <i class="fas fa-trash" ></i>
-                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">Delete</p>
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;" id="del">Delete</p>
               </div>
             </div>
             <div>

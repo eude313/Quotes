@@ -23,20 +23,20 @@
         </button>
       </div> 
       <div class=" animated fadeInDown clearfix" style="animation-delay:1.8s; width: 20vw; margin-left: 1vw;" *ngIf="showForm">
-        <form> 
+        <form #form ="ngForm" (ngSubmit)="submit(form.value)" > 
           <!-- Name input -->
           <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:1.8s;">
-            <input type="text" id="form4Example1" class="form-control" placeholder="Name"/>
+            <input type="text" name="name" id="form4Example1" class="form-control" placeholder="Name" ngModel/>
           </div>
         
           <!-- Email input -->
           <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:1.8s;">
-            <input type="email" id="form4Example2" class="form-control" placeholder="Email address" />
+            <input type="email" name="email" id="form4Example2"  ngModel class="form-control" placeholder="Email address" />
           </div>
         
           <!-- Message input -->
           <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:1.8s;">
-            <textarea class="form-control" id="form4Example3" rows="4" placeholder="Message"></textarea>
+            <textarea class="form-control" name="message"  ngModel id="form4Example3" rows="4" placeholder="Message"></textarea>
           </div>
         
           <!-- Checkbox -->
@@ -65,4 +65,3 @@
 </div>
 
 
-<app-quote-detail></app-quote-detail>

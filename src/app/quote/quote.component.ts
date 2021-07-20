@@ -14,7 +14,7 @@ export class QuoteComponent implements OnInit {
 
   submit(me:any, ga:NgForm){
     if(me.name=="" || me.title=="" || me.quote==""){
-      alert("fill the form to proceed" )
+      alert("fill the form to proceed na u wache kuni pima ")
     }else{
       this.kelly.emit(me);
       ga.reset()
@@ -34,3 +34,7 @@ export class QuoteComponent implements OnInit {
   }
 
 }
+function fas(arg0: string, fas: any, arg2: number, arg3: string) {
+  throw new Error('Function not implemented.');
+}
+

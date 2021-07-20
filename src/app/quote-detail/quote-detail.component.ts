@@ -35,7 +35,7 @@ export class QuoteDetailComponent implements OnInit {
     this.bless.push(event);
   };
 
-  inc(){
+  inc(i:number){
   this.likes ++
   }
   dec(){

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-quote',
@@ -12,9 +12,17 @@ export class QuoteComponent implements OnInit {
   @Output() kelly= new EventEmitter();
   showForm: boolean=false;
 
-  submit(me:any){
-    this.kelly.emit(me);
+  submit(me:any, ga:NgForm){
+    if(me.name=="" || me.title=="" || me.quote==""){
+      alert("fill the form to proceed" )
+    }else{
+      this.kelly.emit(me);
+      ga.reset()
+      this.showForm=false;
+    }
   };
+
+
 
   toggleForm(){
   this.showForm=!this.showForm

@@ -6,12 +6,10 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-detail.component.css']
 })
 export class QuoteDetailComponent implements OnInit {
-  readMore: boolean=false;
+  
   @Output() isRed = new EventEmitter<boolean>();
   @Input()val:number | any;
   changed: any;
-  likes: number=0;
-  dis:number =0;
   // isRead: any;
 
   deleteQuote(red: boolean | true){
@@ -21,7 +19,10 @@ export class QuoteDetailComponent implements OnInit {
   };
   
   bless:Quote[]=[
-    new Quote("Carbon", "Be comfortable", new Date ( 2000,11,23), "“Write it. Shoot it. Publish it. Crochet it, sauté it, whatever. MAKE.” ")
+    new Quote("Carbon", "Be comfortable", new Date ( 2000,11,23), "“Write it. Shoot it. Publish it. Crochet it, sauté it, whatever. MAKE.” "),
+    new Quote("master", "Be comfortable", new Date ( 2011,11,2), "“Write it. Shoot it. Publish it. Crochet it, sauté it, whatever. MAKE.” "),
+    new Quote("mio", "Be comfortable", new Date ( 2011,11,2), "“Write it. Shoot it. Publish it. Crochet it, sauté it, whatever. MAKE.” "),
+    
   ];
 
   // delQuote(index:number):void{
@@ -32,18 +33,12 @@ export class QuoteDetailComponent implements OnInit {
   // }
 
   loga(event:any){
-    this.bless.push(event);
+    this.bless.push(new Quote(event.name, event.title, new Date(), event.quote) );
+    console.log(event)
   };
 
-  inc(i:number){
-  this.likes ++
-  }
-  dec(){
-    this.dis ++
-  }
-
-  toggleReadMore(){
-  this.readMore=!this.readMore
+  toggleReadMore(index:number){
+  this.bless[index].readMore=!this.bless[index].readMore
   };
   
   constructor() {

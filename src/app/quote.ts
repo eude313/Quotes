@@ -1,3 +1,5 @@
 export class Quote {
-    constructor ( public name:string, public title:string, public date: Date,  public quote: string ){};
+    readMore: boolean;
+    constructor ( public name:string, public title:string, public date: Date,  public quote: string ){this.readMore= false};
+    
 };
